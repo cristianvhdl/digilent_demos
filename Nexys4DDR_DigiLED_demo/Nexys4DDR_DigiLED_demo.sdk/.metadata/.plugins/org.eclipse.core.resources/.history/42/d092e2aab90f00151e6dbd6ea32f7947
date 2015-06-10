@@ -1,0 +1,61 @@
+
+#include "DigiLED.h"
+
+#include "DigiLED.h"
+
+typedef struct hsv_data{
+	uint16_t hue;
+	uint8_t sat;
+	uint8_t val;
+}HSV_DATA;
+
+HSV_DATA running_digi[15] = {
+	{510, 255, 180},	//green
+	{510, 255,  50},	//whi
+	{510, 255,  45},	//yellow
+	{510, 255,  40},	//orange
+	{510, 255,  35},	//light-green
+	{510, 255,  30},	//white
+	{510, 255,  25},	//white
+	{510, 255,  20},	//white
+	{510, 255,  15},	//white
+	{510, 255,  10},	//white
+	{510, 255,   5},	//white
+	{510, 255,   5},	//white
+	{510, 255,   0},	//white
+	{510, 255,   0},	//white
+	{510, 255,   0},	//white
+};
+
+int main(){
+	int i, j, color_index=0, rot_index=0;
+
+    print("Hello World\n\r");
+
+    set_leds(225);
+
+    enable_leds();
+
+    while(1){
+		for(i=0; i<numberOfLEDs; i++){
+			if(color_index == 15)
+				color_index = 0;
+
+			HSVsetLEDColor(i,
+				running_digi[(color_index+rot_index)%15].hue,
+				running_digi[(color_index+rot_index)%15].sat,
+				running_digi[(color_index+rot_index)%15].val
+			);
+
+			color_index++;
+
+		}
+
+		if(rot_index == 15)
+			rot_index = 0;
+
+		rot_index++;
+
+		for(j=0;j<400000;j++);
+    }
+}

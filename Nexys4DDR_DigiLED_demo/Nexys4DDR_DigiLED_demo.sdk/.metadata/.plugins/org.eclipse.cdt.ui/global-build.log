@@ -1,0 +1,445 @@
+14:29:58 **** Build of project DigiLED_demo_bsp ****
+make -k all 
+Running Make include in microblaze_0/libsrc/bram_v4_0/src
+make -C microblaze_0/libsrc/bram_v4_0/src -s include  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.5 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g"
+Running Make include in microblaze_0/libsrc/cpu_v2_3/src
+make -C microblaze_0/libsrc/cpu_v2_3/src -s include  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.5 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g"
+Running Make include in microblaze_0/libsrc/DigiLED_v1_0/src
+make -C microblaze_0/libsrc/DigiLED_v1_0/src -s include  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.5 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g"
+Running Make include in microblaze_0/libsrc/standalone_v5_0/src
+make -C microblaze_0/libsrc/standalone_v5_0/src -s include  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.5 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g"
+Running Make libs in microblaze_0/libsrc/bram_v4_0/src
+make -C microblaze_0/libsrc/bram_v4_0/src -s libs  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.5 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g"
+Compiling bram
+mb-ar: creating ../../../lib/libxil.a
+Running Make libs in microblaze_0/libsrc/cpu_v2_3/src
+make -C microblaze_0/libsrc/cpu_v2_3/src -s libs  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.5 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g"
+Compiling cpu
+Running Make libs in microblaze_0/libsrc/DigiLED_v1_0/src
+make -C microblaze_0/libsrc/DigiLED_v1_0/src -s libs  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.5 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g"
+Compiling DigiLED...
+DigiLED.c: In function 'enable_leds':
+DigiLED.c:17:14: error: 'XPAR_DIGI_LED_0_S00_AXI_BASEADDR' undeclared (first use in this function)
+     *((u32*) XPAR_DIGI_LED_0_S00_AXI_BASEADDR) = 0x1;
+              ^
+DigiLED.c:17:14: note: each undeclared identifier is reported only once for each function it appears in
+DigiLED.c: In function 'disable_leds':
+DigiLED.c:21:14: error: 'XPAR_DIGI_LED_0_S00_AXI_BASEADDR' undeclared (first use in this function)
+     *((u32*) XPAR_DIGI_LED_0_S00_AXI_BASEADDR) = 0x0;
+              ^
+DigiLED.c: In function 'HSVsetLEDColor':
+DigiLED.c:27:14: error: 'XPAR_DIGI_LED_0_S00_AXI_BASEADDR' undeclared (first use in this function)
+   *((u32*) ((XPAR_DIGI_LED_0_S00_AXI_BASEADDR+16) + (4*number))) = (hue<<16 | sat<<8 | val);
+              ^
+DigiLED.c: In function 'RGBsetLEDColor':
+DigiLED.c:41:17: error: 'XPAR_DIGI_LED_0_S00_AXI_BASEADDR' undeclared (first use in this function)
+      *((u32*) ((XPAR_DIGI_LED_0_S00_AXI_BASEADDR+16) + (4*number))) = (red<<16 | green<<8 | blue);
+                 ^
+make[1]: *** [libs] Error 1
+make: *** [microblaze_0/libsrc/DigiLED_v1_0/src/make.libs] Error 2
+Running Make libs in microblaze_0/libsrc/standalone_v5_0/src
+make -C microblaze_0/libsrc/standalone_v5_0/src -s libs  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.5 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g"
+Compiling standalone
+make: Target `all' not remade because of errors.
+
+**** Build of configuration Debug for project DigiLED_demo ****
+
+Nothing to build for project DigiLED_demo
+14:33:06 **** Auto Build of project DigiLED_demo_bsp ****
+make -k all 
+Running Make include in microblaze_0/libsrc/bram_v4_0/src
+make -C microblaze_0/libsrc/bram_v4_0/src -s include  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.5 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g"
+Running Make include in microblaze_0/libsrc/cpu_v2_3/src
+make -C microblaze_0/libsrc/cpu_v2_3/src -s include  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.5 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g"
+Running Make include in microblaze_0/libsrc/DigiLED_v1_0/src
+make -C microblaze_0/libsrc/DigiLED_v1_0/src -s include  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.5 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g"
+Running Make include in microblaze_0/libsrc/standalone_v5_0/src
+make -C microblaze_0/libsrc/standalone_v5_0/src -s include  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.5 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g"
+Running Make libs in microblaze_0/libsrc/bram_v4_0/src
+make -C microblaze_0/libsrc/bram_v4_0/src -s libs  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.5 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g"
+Compiling bram
+mb-ar: creating ../../../lib/libxil.a
+Running Make libs in microblaze_0/libsrc/cpu_v2_3/src
+make -C microblaze_0/libsrc/cpu_v2_3/src -s libs  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.5 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g"
+Compiling cpu
+Running Make libs in microblaze_0/libsrc/DigiLED_v1_0/src
+make -C microblaze_0/libsrc/DigiLED_v1_0/src -s libs  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.5 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g"
+Compiling DigiLED...
+DigiLED.c: In function 'enable_leds':
+DigiLED.c:17:14: error: 'XPAR_DIGI_LED_0_S00_AXI_BASEADDR' undeclared (first use in this function)
+     *((u32*) XPAR_DIGI_LED_0_S00_AXI_BASEADDR) = 0x1;
+              ^
+DigiLED.c:17:14: note: each undeclared identifier is reported only once for each function it appears in
+DigiLED.c: In function 'disable_leds':
+DigiLED.c:21:14: error: 'XPAR_DIGI_LED_0_S00_AXI_BASEADDR' undeclared (first use in this function)
+     *((u32*) XPAR_DIGI_LED_0_S00_AXI_BASEADDR) = 0x0;
+              ^
+DigiLED.c: In function 'HSVsetLEDColor':
+DigiLED.c:27:14: error: 'XPAR_DIGI_LED_0_S00_AXI_BASEADDR' undeclared (first use in this function)
+   *((u32*) ((XPAR_DIGI_LED_0_S00_AXI_BASEADDR+16) + (4*number))) = (hue<<16 | sat<<8 | val);
+              ^
+DigiLED.c: In function 'RGBsetLEDColor':
+DigiLED.c:41:17: error: 'XPAR_DIGI_LED_0_S00_AXI_BASEADDR' undeclared (first use in this function)
+      *((u32*) ((XPAR_DIGI_LED_0_S00_AXI_BASEADDR+16) + (4*number))) = (red<<16 | green<<8 | blue);
+                 ^
+make[1]: *** [libs] Error 1
+make: *** [microblaze_0/libsrc/DigiLED_v1_0/src/make.libs] Error 2
+Running Make libs in microblaze_0/libsrc/standalone_v5_0/src
+make -C microblaze_0/libsrc/standalone_v5_0/src -s libs  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.5 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g"
+Compiling standalone
+make: Target `all' not remade because of errors.
+
+****  of configuration Debug for project DigiLED_demo ****
+
+Nothing to build for project DigiLED_demo
+14:33:39 **** Auto Build of project DigiLED_demo_bsp ****
+make -k all 
+Running Make include in microblaze_0/libsrc/bram_v4_0/src
+make -C microblaze_0/libsrc/bram_v4_0/src -s include  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.5 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g"
+Running Make include in microblaze_0/libsrc/cpu_v2_3/src
+make -C microblaze_0/libsrc/cpu_v2_3/src -s include  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.5 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g"
+Running Make include in microblaze_0/libsrc/DigiLED_v1_0/src
+make -C microblaze_0/libsrc/DigiLED_v1_0/src -s include  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.5 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g"
+Running Make include in microblaze_0/libsrc/standalone_v5_0/src
+make -C microblaze_0/libsrc/standalone_v5_0/src -s include  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.5 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g"
+Running Make libs in microblaze_0/libsrc/bram_v4_0/src
+make -C microblaze_0/libsrc/bram_v4_0/src -s libs  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.5 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g"
+Compiling bram
+mb-ar: creating ../../../lib/libxil.a
+Running Make libs in microblaze_0/libsrc/cpu_v2_3/src
+make -C microblaze_0/libsrc/cpu_v2_3/src -s libs  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.5 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g"
+Compiling cpu
+Running Make libs in microblaze_0/libsrc/DigiLED_v1_0/src
+make -C microblaze_0/libsrc/DigiLED_v1_0/src -s libs  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.5 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g"
+Compiling DigiLED...
+DigiLED.c: In function 'enable_leds':
+DigiLED.c:17:14: error: 'XPAR_DIGI_LED_0_S00_AXI_BASEADDR' undeclared (first use in this function)
+     *((u32*) XPAR_DIGI_LED_0_S00_AXI_BASEADDR) = 0x1;
+              ^
+DigiLED.c:17:14: note: each undeclared identifier is reported only once for each function it appears in
+DigiLED.c: In function 'disable_leds':
+DigiLED.c:21:14: error: 'XPAR_DIGI_LED_0_S00_AXI_BASEADDR' undeclared (first use in this function)
+     *((u32*) XPAR_DIGI_LED_0_S00_AXI_BASEADDR) = 0x0;
+              ^
+DigiLED.c: In function 'HSVsetLEDColor':
+DigiLED.c:27:14: error: 'XPAR_DIGI_LED_0_S00_AXI_BASEADDR' undeclared (first use in this function)
+   *((u32*) ((XPAR_DIGI_LED_0_S00_AXI_BASEADDR+16) + (4*number))) = (hue<<16 | sat<<8 | val);
+              ^
+DigiLED.c: In function 'RGBsetLEDColor':
+DigiLED.c:41:17: error: 'XPAR_DIGI_LED_0_S00_AXI_BASEADDR' undeclared (first use in this function)
+      *((u32*) ((XPAR_DIGI_LED_0_S00_AXI_BASEADDR+16) + (4*number))) = (red<<16 | green<<8 | blue);
+                 ^
+make[1]: *** [libs] Error 1
+make: *** [microblaze_0/libsrc/DigiLED_v1_0/src/make.libs] Error 2
+Running Make libs in microblaze_0/libsrc/standalone_v5_0/src
+make -C microblaze_0/libsrc/standalone_v5_0/src -s libs  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.5 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g"
+Compiling standalone
+make: Target `all' not remade because of errors.
+
+****  of configuration Debug for project DigiLED_demo ****
+
+Nothing to build for project DigiLED_demo
+14:34:05 **** Build of project DigiLED_demo_bsp ****
+make -k all 
+Running Make include in microblaze_0/libsrc/bram_v4_0/src
+make -C microblaze_0/libsrc/bram_v4_0/src -s include  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.5 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g"
+Running Make include in microblaze_0/libsrc/cpu_v2_3/src
+make -C microblaze_0/libsrc/cpu_v2_3/src -s include  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.5 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g"
+Running Make include in microblaze_0/libsrc/DigiLED_v1_0/src
+make -C microblaze_0/libsrc/DigiLED_v1_0/src -s include  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.5 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g"
+Running Make include in microblaze_0/libsrc/standalone_v5_0/src
+make -C microblaze_0/libsrc/standalone_v5_0/src -s include  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.5 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g"
+Running Make libs in microblaze_0/libsrc/bram_v4_0/src
+make -C microblaze_0/libsrc/bram_v4_0/src -s libs  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.5 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g"
+Compiling bram
+mb-ar: creating ../../../lib/libxil.a
+Running Make libs in microblaze_0/libsrc/cpu_v2_3/src
+make -C microblaze_0/libsrc/cpu_v2_3/src -s libs  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.5 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g"
+Compiling cpu
+Running Make libs in microblaze_0/libsrc/DigiLED_v1_0/src
+make -C microblaze_0/libsrc/DigiLED_v1_0/src -s libs  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.5 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g"
+Compiling DigiLED...
+DigiLED.c: In function 'enable_leds':
+DigiLED.c:17:14: error: 'XPAR_DIGI_LED_0_S00_AXI_BASEADDR' undeclared (first use in this function)
+     *((u32*) XPAR_DIGI_LED_0_S00_AXI_BASEADDR) = 0x1;
+              ^
+DigiLED.c:17:14: note: each undeclared identifier is reported only once for each function it appears in
+DigiLED.c: In function 'disable_leds':
+DigiLED.c:21:14: error: 'XPAR_DIGI_LED_0_S00_AXI_BASEADDR' undeclared (first use in this function)
+     *((u32*) XPAR_DIGI_LED_0_S00_AXI_BASEADDR) = 0x0;
+              ^
+DigiLED.c: In function 'HSVsetLEDColor':
+DigiLED.c:27:14: error: 'XPAR_DIGI_LED_0_S00_AXI_BASEADDR' undeclared (first use in this function)
+   *((u32*) ((XPAR_DIGI_LED_0_S00_AXI_BASEADDR+16) + (4*number))) = (hue<<16 | sat<<8 | val);
+              ^
+DigiLED.c: In function 'RGBsetLEDColor':
+DigiLED.c:41:17: error: 'XPAR_DIGI_LED_0_S00_AXI_BASEADDR' undeclared (first use in this function)
+      *((u32*) ((XPAR_DIGI_LED_0_S00_AXI_BASEADDR+16) + (4*number))) = (red<<16 | green<<8 | blue);
+                 ^
+make[1]: *** [libs] Error 1
+Running Make libs in microblaze_0/libsrc/standalone_v5_0/src
+make: *** [microblaze_0/libsrc/DigiLED_v1_0/src/make.libs] Error 2
+make -C microblaze_0/libsrc/standalone_v5_0/src -s libs  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.5 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g"
+Compiling standalone
+make: Target `all' not remade because of errors.
+
+**** Build of configuration Debug for project DigiLED_demo ****
+
+Nothing to build for project DigiLED_demo
+14:40:07 **** Auto Build of project DigiLED_demo_bsp ****
+make -k all 
+Running Make include in microblaze_0/libsrc/bram_v4_0/src
+make -C microblaze_0/libsrc/bram_v4_0/src -s include  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.5 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g"
+Running Make include in microblaze_0/libsrc/cpu_v2_3/src
+make -C microblaze_0/libsrc/cpu_v2_3/src -s include  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.5 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g"
+Running Make include in microblaze_0/libsrc/DigiLED_v1_0/src
+make -C microblaze_0/libsrc/DigiLED_v1_0/src -s include  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.5 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g"
+Running Make include in microblaze_0/libsrc/standalone_v5_0/src
+make -C microblaze_0/libsrc/standalone_v5_0/src -s include  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.5 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g"
+Running Make libs in microblaze_0/libsrc/bram_v4_0/src
+make -C microblaze_0/libsrc/bram_v4_0/src -s libs  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.5 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g"
+Compiling bram
+mb-ar: creating ../../../lib/libxil.a
+Running Make libs in microblaze_0/libsrc/cpu_v2_3/src
+make -C microblaze_0/libsrc/cpu_v2_3/src -s libs  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.5 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g"
+Compiling cpu
+Running Make libs in microblaze_0/libsrc/DigiLED_v1_0/src
+make -C microblaze_0/libsrc/DigiLED_v1_0/src -s libs  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.5 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g"
+Compiling DigiLED...
+Running Make libs in microblaze_0/libsrc/standalone_v5_0/src
+make -C microblaze_0/libsrc/standalone_v5_0/src -s libs  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.5 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g"
+Compiling standalone
+Finished building libraries
+
+****  of configuration Debug for project DigiLED_demo ****
+
+Nothing to build for project DigiLED_demo
+14:40:28 **** Auto Build of configuration Debug for project DigiLED_demo ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../DigiLED_demo_bsp/microblaze_0/include -mlittle-endian -mcpu=v9.5 -mxl-soft-mul -Wl,--no-relax -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: DigiLED_demo.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../DigiLED_demo_bsp/microblaze_0/lib -mlittle-endian -mcpu=v9.5 -mxl-soft-mul -Wl,--no-relax -o "DigiLED_demo.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+/opt/Xilinx/SDK/2015.1/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/4.9.2/../../../../microblaze-xilinx-elf/lib/le/crtinit.o: In function `_crtinit':
+(.text+0x78): undefined reference to `main'
+collect2: error: ld returned 1 exit status
+make: *** [DigiLED_demo.elf] Error 1
+14:42:42 **** Auto Build of configuration Debug for project DigiLED_demo ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../DigiLED_demo_bsp/microblaze_0/include -mlittle-endian -mcpu=v9.5 -mxl-soft-mul -Wl,--no-relax -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: DigiLED_demo.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../DigiLED_demo_bsp/microblaze_0/lib -mlittle-endian -mcpu=v9.5 -mxl-soft-mul -Wl,--no-relax -o "DigiLED_demo.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+../../DigiLED_demo_bsp/microblaze_0/lib/libgloss.a(print.o): In function `print':
+(.text+0x20): undefined reference to `outbyte'
+collect2: error: ld returned 1 exit status
+make: *** [DigiLED_demo.elf] Error 1
+14:42:52 **** Auto Build of configuration Debug for project DigiLED_demo ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../DigiLED_demo_bsp/microblaze_0/include -mlittle-endian -mcpu=v9.5 -mxl-soft-mul -Wl,--no-relax -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:33:5: warning: implicit declaration of function 'print' [-Wimplicit-function-declaration]
+     print("Hello World\n\r");
+     ^
+Finished building: ../src/main.c
+ 
+Building target: DigiLED_demo.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../DigiLED_demo_bsp/microblaze_0/lib -mlittle-endian -mcpu=v9.5 -mxl-soft-mul -Wl,--no-relax -o "DigiLED_demo.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+../../DigiLED_demo_bsp/microblaze_0/lib/libgloss.a(print.o): In function `print':
+(.text+0x20): undefined reference to `outbyte'
+collect2: error: ld returned 1 exit status
+make: *** [DigiLED_demo.elf] Error 1
+14:43:01 **** Auto Build of configuration Debug for project DigiLED_demo ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../DigiLED_demo_bsp/microblaze_0/include -mlittle-endian -mcpu=v9.5 -mxl-soft-mul -Wl,--no-relax -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: DigiLED_demo.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../DigiLED_demo_bsp/microblaze_0/lib -mlittle-endian -mcpu=v9.5 -mxl-soft-mul -Wl,--no-relax -o "DigiLED_demo.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: DigiLED_demo.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size DigiLED_demo.elf  |tee "DigiLED_demo.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   3020	    348	   2104	   5472	   1560	DigiLED_demo.elf
+Finished building: DigiLED_demo.elf.size
+ 
+14:43:25 **** Auto Build of configuration Debug for project DigiLED_demo ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../DigiLED_demo_bsp/microblaze_0/include -mlittle-endian -mcpu=v9.5 -mxl-soft-mul -Wl,--no-relax -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: DigiLED_demo.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../DigiLED_demo_bsp/microblaze_0/lib -mlittle-endian -mcpu=v9.5 -mxl-soft-mul -Wl,--no-relax -o "DigiLED_demo.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: DigiLED_demo.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size DigiLED_demo.elf  |tee "DigiLED_demo.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   3020	    348	   2104	   5472	   1560	DigiLED_demo.elf
+Finished building: DigiLED_demo.elf.size
+ 
+14:43:49 **** Incremental Build of configuration Debug for project DigiLED_demo ****
+make all 
+make: Nothing to be done for `all'.
+14:44:36 **** Incremental Build of configuration Debug for project DigiLED_demo ****
+make all 
+make: Nothing to be done for `all'.
+14:44:45 **** Incremental Build of configuration Debug for project DigiLED_demo ****
+make all 
+make: Nothing to be done for `all'.
+14:44:52 **** Auto Build of configuration Debug for project DigiLED_demo ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../DigiLED_demo_bsp/microblaze_0/include -mlittle-endian -mcpu=v9.5 -mxl-soft-mul -Wl,--no-relax -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: DigiLED_demo.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../DigiLED_demo_bsp/microblaze_0/lib -mlittle-endian -mcpu=v9.5 -mxl-soft-mul -Wl,--no-relax -o "DigiLED_demo.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: DigiLED_demo.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size DigiLED_demo.elf  |tee "DigiLED_demo.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   3020	    348	   2104	   5472	   1560	DigiLED_demo.elf
+Finished building: DigiLED_demo.elf.size
+ 
+14:44:53 **** Incremental Build of configuration Debug for project DigiLED_demo ****
+make all 
+make: Nothing to be done for `all'.
+14:45:01 **** Auto Build of configuration Debug for project DigiLED_demo ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../DigiLED_demo_bsp/microblaze_0/include -mlittle-endian -mcpu=v9.5 -mxl-soft-mul -Wl,--no-relax -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: DigiLED_demo.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../DigiLED_demo_bsp/microblaze_0/lib -mlittle-endian -mcpu=v9.5 -mxl-soft-mul -Wl,--no-relax -o "DigiLED_demo.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: DigiLED_demo.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size DigiLED_demo.elf  |tee "DigiLED_demo.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   3020	    348	   2104	   5472	   1560	DigiLED_demo.elf
+Finished building: DigiLED_demo.elf.size
+ 
+14:45:08 **** Auto Build of configuration Debug for project DigiLED_demo ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../DigiLED_demo_bsp/microblaze_0/include -mlittle-endian -mcpu=v9.5 -mxl-soft-mul -Wl,--no-relax -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: DigiLED_demo.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../DigiLED_demo_bsp/microblaze_0/lib -mlittle-endian -mcpu=v9.5 -mxl-soft-mul -Wl,--no-relax -o "DigiLED_demo.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: DigiLED_demo.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size DigiLED_demo.elf  |tee "DigiLED_demo.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   3020	    348	   2104	   5472	   1560	DigiLED_demo.elf
+Finished building: DigiLED_demo.elf.size
+ 
+14:45:45 **** Auto Build of configuration Debug for project DigiLED_demo ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../DigiLED_demo_bsp/microblaze_0/include -mlittle-endian -mcpu=v9.5 -mxl-soft-mul -Wl,--no-relax -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: DigiLED_demo.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../DigiLED_demo_bsp/microblaze_0/lib -mlittle-endian -mcpu=v9.5 -mxl-soft-mul -Wl,--no-relax -o "DigiLED_demo.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: DigiLED_demo.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size DigiLED_demo.elf  |tee "DigiLED_demo.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   3020	    348	   2104	   5472	   1560	DigiLED_demo.elf
+Finished building: DigiLED_demo.elf.size
+ 
+14:45:50 **** Auto Build of configuration Debug for project DigiLED_demo ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../DigiLED_demo_bsp/microblaze_0/include -mlittle-endian -mcpu=v9.5 -mxl-soft-mul -Wl,--no-relax -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: DigiLED_demo.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../DigiLED_demo_bsp/microblaze_0/lib -mlittle-endian -mcpu=v9.5 -mxl-soft-mul -Wl,--no-relax -o "DigiLED_demo.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: DigiLED_demo.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size DigiLED_demo.elf  |tee "DigiLED_demo.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   3020	    348	   2104	   5472	   1560	DigiLED_demo.elf
+Finished building: DigiLED_demo.elf.size
+ 
+14:45:51 **** Incremental Build of configuration Debug for project DigiLED_demo ****
+make all 
+make: Nothing to be done for `all'.
+14:48:16 **** Auto Build of configuration Debug for project DigiLED_demo ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../DigiLED_demo_bsp/microblaze_0/include -mlittle-endian -mcpu=v9.5 -mxl-soft-mul -Wl,--no-relax -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: DigiLED_demo.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../DigiLED_demo_bsp/microblaze_0/lib -mlittle-endian -mcpu=v9.5 -mxl-soft-mul -Wl,--no-relax -o "DigiLED_demo.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: DigiLED_demo.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size DigiLED_demo.elf  |tee "DigiLED_demo.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   3020	    348	   2104	   5472	   1560	DigiLED_demo.elf
+Finished building: DigiLED_demo.elf.size
+ 
+14:48:17 **** Incremental Build of configuration Debug for project DigiLED_demo ****
+make all 
+make: Nothing to be done for `all'.
+14:48:35 **** Auto Build of configuration Debug for project DigiLED_demo ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../DigiLED_demo_bsp/microblaze_0/include -mlittle-endian -mcpu=v9.5 -mxl-soft-mul -Wl,--no-relax -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: DigiLED_demo.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../DigiLED_demo_bsp/microblaze_0/lib -mlittle-endian -mcpu=v9.5 -mxl-soft-mul -Wl,--no-relax -o "DigiLED_demo.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: DigiLED_demo.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size DigiLED_demo.elf  |tee "DigiLED_demo.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   3020	    348	   2104	   5472	   1560	DigiLED_demo.elf
+Finished building: DigiLED_demo.elf.size
+ 
+14:48:36 **** Incremental Build of configuration Debug for project DigiLED_demo ****
+make all 
+make: Nothing to be done for `all'.
